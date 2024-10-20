@@ -30,13 +30,15 @@ if [ -z "$GPU_NAME" ]; then
 fi
 
 # Define valores padrão para as variáveis se não estiverem definidas
-GPU_SIZE=${GPU_SIZE:-100000000000}
+GPU_SIZE=${GPU_SIZE:-25000000000}
 
 GPU_ADDRESS=${GPU_ADDRESS:-RTX-4090}
 
-GPU_BLOCKS=${GPU_BLOCKS:-3000}
+GPU_BLOCKS=${GPU_BLOCKS:-2000}
 
 GPU_PING=${GPU_PING:-1}
 
+GPU_TIME=${GPU_TIME:-1}
+
 # Executa o comando com os valores definidos
-./gpu -n "$GPU_NAME" -s "$GPU_SIZE" -a "$GPU_ADDRESS" -b "$GPU_BLOCKS" -p "$GPU_PING"
+./gpu -n "$GPU_NAME" -s "$GPU_SIZE" -a "$GPU_ADDRESS" -b "$GPU_BLOCKS" -p "$GPU_PING" -t "$GPU_TIME"
