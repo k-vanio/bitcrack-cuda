@@ -36,5 +36,7 @@ GPU_ADDRESS=${GPU_ADDRESS:-RTX-4090}
 
 GPU_BLOCKS=${GPU_BLOCKS:-3000}
 
+GPU_PING=${GPU_PING:-1}
+
 # Executa o comando com os valores definidos
-./gpu --name="$GPU_NAME" --size="$GPU_SIZE" --address="$GPU_ADDRESS" --blocks="$GPU_BLOCKS"
+./gpu -n "$GPU_NAME" -s "$GPU_SIZE" -a "$GPU_ADDRESS" -b "$GPU_BLOCKS" -p "$GPU_PING"
