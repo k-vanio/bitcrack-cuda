@@ -40,5 +40,7 @@ GPU_PING=${GPU_PING:-1}
 
 GPU_TIME=${GPU_TIME:-1}
 
+GPU_BLOCK_ID=${GPU_BLOCK_ID:-""}
+
 # Executa o comando com os valores definidos
-./gpu -n "$GPU_NAME" -s "$GPU_SIZE" -a "$GPU_ADDRESS" -b "$GPU_BLOCKS" -p "$GPU_PING" -t "$GPU_TIME"
+./gpu -n "$GPU_NAME" -s "$GPU_SIZE" -a "$GPU_ADDRESS" -b "$GPU_BLOCKS" -p "$GPU_PING" -t "$GPU_TIME" -i "$GPU_BLOCK_ID"
